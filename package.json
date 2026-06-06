@@ -1,0 +1,14 @@
+{
+  "name": "esquisse",
+  "version": "0.1.0",
+  "description": "Headless map layer for MapLibre — no UI dependency",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./*": "./src/*"
+  },
+  "files": [
+    "src"
+  ]
+}
