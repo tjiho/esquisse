@@ -6,7 +6,7 @@ const DEFAULT_TILES = [
     "&TILEMATRIXSET=PM&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}",
 ];
 
-export default class Sattelite extends AbstractLayer {
+export default class Satellite extends AbstractLayer {
   constructor({ map, tiles = DEFAULT_TILES, baseStyle } = {}) {
     super({ map, baseStyle });
 
