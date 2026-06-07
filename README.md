@@ -1,4 +1,7 @@
-# esquisse
+# Esquisse
+
+![logo](./image.png)
+
 
 Reusable cartographic layers built on top of MapLibre GL. Designed to be consumed both by a Preact frontend
 (`simplestreetmap`) and by a Vue/Nuxt frontend (`ptitlutins`).
