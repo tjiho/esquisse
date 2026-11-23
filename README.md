@@ -37,20 +37,26 @@ Methods added on the instance:
 
 ### `LayerSelection`
 
-Holds a set of layers and the active one.
+Holds a set of layers and the active one. A `plan` layer (base style only)
+is always present; pass any other layers in `layers` as `{ key: { layer, name } }`.
 
 ```js
-import { LayerSelection } from "esquisse";
+import { LayerSelection, Satellite, Bicycle } from "esquisse";
 
-const selection = new LayerSelection({ map, baseStyle });
+const selection = new LayerSelection({
+  map,
+  baseStyle,
+  layers: {
+    satellite: { layer: new Satellite({ map, baseStyle }), name: "Satellite" },
+    bicycle: { layer: new Bicycle({ map }), name: "Vélo" },
+  },
+});
 selection.setActive("bicycle");
 selection.subscribe((activeKey) => { /* ... */ });
 
 selection.current.show();
 selection.current.legend(); // { groups: [...] } or undefined
 ```
-
-Available keys: `plan`, `satellite`, `batiment3d`, `bicycle`.
 
 ### Layers
 
